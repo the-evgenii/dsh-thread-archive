@@ -1,0 +1,3 @@
+- insert:
+    - id: local-auto-archive
+      name: '@local/dsh-thread-archive'

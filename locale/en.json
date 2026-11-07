@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Auto archive",
+    "description": "Archive inactive conversations after N days. Settings, exclusions, history and restore. No data deletion or model calls."
+  }
+}

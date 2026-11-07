@@ -1,0 +1,57 @@
+{
+  "name": "@local/dsh-thread-archive",
+  "version": "1.0.5",
+  "private": true,
+  "type": "module",
+  "description": "Автоархивация тредов: настройки, исключения, история и восстановление, русский и английский интерфейс.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/the-evgenii/dsh-thread-archive.git"
+  },
+  "homepage": "https://github.com/the-evgenii/dsh-thread-archive#readme",
+  "bugs": { "url": "https://github.com/the-evgenii/dsh-thread-archive/issues" },
+  "engines": {
+    "node": ">=24",
+    "dsh": "0.2.2-rc.1"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "core.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "THIRD-PARTY-NOTICES.md"
+  ],
+  "scripts": {
+    "check": "node --check index.js && node --check core.js && node --check client.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-connection"
+      ]
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "3.19.0",
+    "@deepseek-ai/dsh-session": "0.2.2-rc.1"
+  }
+}
