@@ -7,7 +7,7 @@
 В менеджере плагинов Harness укажите источник установки:
 
 ```text
-https://github.com/the-evgenii/dsh-thread-archive.git
+github:the-evgenii/dsh-thread-archive
 ```
 
 Через инструмент агента `plugin_manager`:
@@ -15,15 +15,15 @@ https://github.com/the-evgenii/dsh-thread-archive.git
 ```json
 {
   "action": "install_bundle",
-  "target": "https://github.com/the-evgenii/dsh-thread-archive.git"
+  "target": "github:the-evgenii/dsh-thread-archive"
 }
 ```
 
 Пакет содержит готовые Host- и Client-файлы; сборка и install-скрипты не нужны. Установка включает плагин в текущем профиле. Страница находится в **Настройки → Автоархивация**.
 
-Совместимость: **DeepSeek Harness 0.2.2-rc.1**, Node.js **24+**. Версии вне этого диапазона не заявлены совместимыми. `@local/dsh-thread-archive` — имя пакета, а не адрес в npm: устанавливайте по GitHub URL выше.
+Совместимость: **DeepSeek Harness 0.2.2-rc.1**, Node.js **24+**. Версии вне этого диапазона не заявлены совместимыми. `@local/dsh-thread-archive` — имя пакета, а не адрес в npm: устанавливайте по GitHub-источнику выше.
 
-Источник Git фиксируется менеджером пакетов на конкретном коммите. Новые коммиты не загружаются автоматически; для обновления повторите установку из того же URL. Состояние плагина хранится отдельно от установленного пакета.
+Источник Git фиксируется менеджером пакетов на конкретном коммите. Новые коммиты не загружаются автоматически; для обновления повторите установку из того же источника. Состояние плагина хранится отдельно от установленного пакета.
 
 ## Настройки
 
@@ -84,4 +84,4 @@ DSH_RUNTIME_TESTS=1 DSH_RUNTIME_DIR=/absolute/path/to/dsh \
 
 ## Лицензия
 
-[MIT](LICENSE). Контролы адаптированы из `@deepseek-ai/dsh-client-ui-primitives` 0.2.2-rc.1 и включены локально, без импорта внутреннего UI-пакета во время работы. Источник и лицензия DeepSeek сохранены в [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). SVG-иконка создана для этого плагина.
+[MIT](LICENSE). Контролы адаптированы из `@deepseek-ai/dsh-client-ui-primitives` 0.2.2-rc.1 и включены локально, без импорта внутреннего UI-пакета во время работы. Источник и лицензия DeepSeek сохранены в [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). Собственная иконка не поставляется; используется стандартный значок Harness.

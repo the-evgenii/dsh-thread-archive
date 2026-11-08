@@ -1,6 +1,6 @@
 {
   "name": "@local/dsh-thread-archive",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": true,
   "type": "module",
   "description": "Автоархивация тредов: настройки, исключения, история и восстановление, русский и английский интерфейс.",
@@ -18,8 +18,7 @@
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
-    "./locale/*.json": "./locale/*.json",
-    "./icon": "./icon.svg"
+    "./locale/*.json": "./locale/*.json"
   },
   "files": [
     "index.js",
@@ -27,7 +26,6 @@
     "client.js",
     "cordis.patch.yml",
     "locale/*.json",
-    "icon.svg",
     "README.md",
     "LICENSE",
     "THIRD-PARTY-NOTICES.md"
